@@ -1,0 +1,282 @@
+
+.error
+{
+	text-align: center;
+	line-height: 80vh;
+	font-size: 55px;
+}
+
+body
+{
+	margin:0;
+	font-family: arial;
+	background: slateblue;
+}
+input,button,a
+{
+	padding: 10px;
+	border:0;
+	outline:0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+h1
+{margin:0;}
+header
+{
+	position: sticky;
+	top:0;
+	background: black;
+	color:white;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px;
+}
+
+
+header a
+{
+	color:silver;
+}
+header a:hover
+{
+	color:white;
+}
+
+footer
+{
+	padding: 10px;
+	background: black;
+	color:white;
+	text-align: center;
+}
+
+
+main
+{
+	display: flex;
+}
+main .left
+{
+	width: 20%;
+	position: sticky;
+}
+main .left p
+{
+	margin:10px;
+	padding:10px;
+	border-radius: 100px;
+	background: black;
+	color:white;
+}
+main .left p span
+{
+	float: right;
+}
+main .left p.active
+{
+	background: white;
+	color:black;
+}
+main .right
+{
+	width: 80%;
+}
+main .right .filters
+{
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	position: sticky;
+	top:20px;
+}
+main .right .filters button.active
+{
+	background: black;
+	color:white;
+}
+main .right .products
+{
+	height: 80vh;
+	overflow: auto;
+}
+main .right .products .item
+{
+	display: inline-table;
+	padding: 10px;
+	margin:10px;
+	background: white;
+	width: 15%;
+	position: relative;
+}
+main .right .products .item img
+{
+	width: 100%;
+}
+main .right .products .item .tags
+{
+	position: absolute;
+	top:0;
+	left:0;
+	background: black;
+	color:white;
+	padding: 10px;
+}
+main .right .products .item .cart-btn
+{
+	cursor: pointer;
+	position: absolute;
+	bottom:0;
+	right:0;
+	background: black;
+	color:white;
+	padding: 10px;
+}
+main .right .products .item .discount
+{
+	position: absolute;
+	top:50%;
+	right:0;
+	background:yellow;
+	padding: 10px;
+	transform: translateY(-50%);
+}
+
+
+form
+{
+	background: white;
+	margin:2% auto;
+	padding: 2%;
+	width: 30%;
+	box-shadow:0 10px 10px black;
+}
+form .form-flex
+{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+form .form-flex input
+{
+	border-bottom: 1px solid #000;
+	width: 100%;
+}
+form button
+{
+	background: black;
+	color:white;
+	width: 100%;
+}
+
+.login
+{
+	height: 80vh;
+}
+
+.loader
+{
+	position: fixed;
+	top:50%;
+	left:50%;
+	width: 500px;
+	transform: translate(-50%,-50%);
+	z-index: 111111111111;
+	animation: abc 1s infinite ;
+
+}
+
+@keyframes abc
+{
+	100% {filter: hue-rotate(900deg);}
+}
+
+.orders,
+.cart
+{
+	padding: 2%;
+}
+
+table
+{
+	width: 100%;
+	background: white;
+	text-align: center;
+}
+
+thead
+{
+	top:50px;
+	background:red;
+	color:white;
+	position: sticky;
+	top:0;
+}
+
+.profile
+{
+	padding: 5%;
+}
+.profile .card
+{
+	padding: 2%;
+	display: inline-table;
+	background: white;
+}
+.profile .card button
+{
+	background: black;
+	color:white;
+}
+
+@media (max-width:990px)
+{
+	header
+	{
+		flex-flow: column;
+		padding: 20px;
+		justify-content: center;
+		text-align: center;
+	}
+	header div
+	{
+		width: auto;
+	}
+	main
+	{
+		flex-flow: column;
+	}
+	main .right,
+	main .left 
+	{
+		width: auto;
+		text-align: center;
+		position: static;
+	}
+	main .left  p
+	{
+		display: inline-table;
+		padding: 5px 10px;
+		margin:2px;
+	}
+	main .right .products
+	{
+		width: auto;
+		text-align: center;
+	}
+	main .right .products .item
+	{
+		width: 23%;
+	}
+	.error
+	{
+		font-size: 30px;
+		line-height: 60vh;
+	}
+	form
+	{
+		width: 70%;
+	}
+}
+
